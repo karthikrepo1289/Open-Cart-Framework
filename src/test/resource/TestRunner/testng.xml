@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Testing" thread-count="1" verbose="4" parallel="tests">
+<parameter name="browser" value="chrome"></parameter>
+<listeners>
+	<listener class-name="com.qa.opencart.listerners.ExtentReportListener"></listener>
+	<!--listener class-name="com.qa.opencart.listerners.AnnotationTransformer"/-->
+	<listener class-name="com.qa.opencart.listerners.TestAllureListener"></listener>
+</listeners>
+
+<test name="Login Page Test">
+	<classes>
+		<class name="com.qa.opencart.test.LoginPageTest"/>
+	</classes>
+</test>
+
+<test name="Account Page Test">
+	<classes>
+		<class name="com.qa.opencart.test.AccountPageTest"/>
+	</classes>
+</test>
+
+<test name="Register Page Test">
+	<classes>
+		<class name="com.qa.opencart.test.RegisterPageTest"/>
+	</classes>
+</test>
+
+</suite>
